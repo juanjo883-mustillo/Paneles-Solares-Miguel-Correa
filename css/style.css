@@ -9794,3 +9794,45 @@ h4, h5, h6 {
         margin-bottom: 30px;
     }
 }
+
+
+/* =========================================
+   Media Query para Tablets y Celulares 
+   (Pantallas menores a 768px)
+   ========================================= */
+@media (max-width: 768px) {
+    /* 1. Centrar todas las imágenes por defecto y hacerlas responsivas */
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* 2. Ajustar la sección "Quiénes Somos" para que quede en columna y centrada */
+    .quienes-somos-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .quienes-somos-logo {
+        margin-bottom: 20px; /* Separación entre el logo y el texto en celulares */
+    }
+
+    /* 3. Asegurar que los textos principales estén centrados en móviles */
+    .section-title, 
+    .quienes-somos-texto h2, 
+    .quienes-somos-texto p {
+        text-align: center !important;
+    }
+
+    /* 4. Ajustes para los botones en dispositivos móviles */
+    .btn-scroll {
+        display: block;
+        width: 100%; /* Botones ocupan todo el ancho en móviles para ser más fáciles de tocar */
+        margin: 10px auto;
+        text-align: center;
+    }
+}
