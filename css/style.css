@@ -9651,3 +9651,93 @@ h4, h5, h6 {
   padding: 0;
   list-style-type: none;
 }
+
+/* Estilos de color para la barra de navegación Enginy */
+.navbar-enginy {
+    background-color: #0b3d91; /* Azul panel solar */
+    border-bottom: 4px solid transparent;
+    border-image: linear-gradient(to right, #ff8c00, #ffeb3b); /* Degradado Naranja a Amarillo */
+    border-image-slice: 1;
+}
+
+.navbar-enginy .nav-link {
+    color: #ffffff !important; /* Texto blanco por defecto */
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.navbar-enginy .nav-link:hover,
+.navbar-enginy .nav-link.active {
+    color: #ffeb3b !important; /* Se vuelve Amarillo al pasar el mouse */
+    text-shadow: 0 0 10px rgba(255, 140, 0, 0.8); /* Brillo naranja de fondo */
+}
+
+.navbar-enginy .navbar-toggler {
+    background-color: #ff8c00; /* Botón de menú naranja en celulares */
+    border: none;
+    outline: none;
+}
+
+/* Estilos para el Carrusel y Botones Enginy */
+.text-enginy-orange {
+    color: #ff8c00 !important;
+}
+
+.btn-enginy {
+    background-color: #ff8c00;
+    color: #ffffff !important;
+    border: 2px solid #ff8c00;
+    transition: all 0.3s ease;
+}
+
+.btn-enginy:hover {
+    background-color: transparent;
+    color: #ffeb3b !important; /* Texto amarillo al pasar el mouse */
+    border-color: #ffeb3b;
+}
+
+/* Controles del carrusel (flechitas laterales) */
+.btn-enginy-control {
+    background-color: #0b3d91 !important; /* Azul panel solar */
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-enginy-control:hover {
+    background-color: #ff8c00 !important; /* Se vuelve naranja al pasar el mouse */
+}
+
+/* Estilos para la sección de Servicios Enginy */
+.text-enginy-orange {
+    color: #ff8c00 !important;
+}
+
+.bg-enginy-blue {
+    background-color: #0b3d91 !important; /* Fondo azul para las cajas */
+}
+
+/* El texto dentro de las cajas azules tiene que ser blanco para que se lea */
+.bg-enginy-blue h3 {
+    color: #ffffff !important;
+}
+
+/* El botón circular con el símbolo "+" */
+.btn-enginy-plus {
+    background-color: #ff8c00 !important;
+    border-color: #ff8c00 !important;
+    transition: all 0.3s ease;
+}
+
+.btn-enginy-plus:hover {
+    background-color: #ffeb3b !important; /* Se vuelve amarillo al pasar el mouse */
+    border-color: #ffeb3b !important;
+}
+
+/* Forzar que todas las fotos de la galería tengan el mismo tamaño */
+.gallery-item img {
+    height: 300px; /* Podés cambiar este número si las querés más altas o más bajas */
+    object-fit: cover; /* Recorta la foto suavemente para que llene la caja sin deformarse */
+    object-position: center; /* Centra el recorte */
+}
