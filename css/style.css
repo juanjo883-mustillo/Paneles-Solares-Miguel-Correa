@@ -9836,3 +9836,177 @@ h4, h5, h6 {
         text-align: center;
     }
 }
+
+.text-enginy-accent {
+    color: #00a8ff !important;
+}
+
+
+
+/* Estilos de color para la barra de navegación Enginy */
+.navbar-enginy {
+    background-color: #0b3d91; /* Azul oscuro */
+    border-bottom: 4px solid #00a8ff; /* Línea celeste */
+}
+
+.navbar-enginy .nav-link {
+    color: #ffffff !important; /* Texto blanco por defecto */
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.navbar-enginy .nav-link:hover,
+.navbar-enginy .nav-link.active {
+    color: #00a8ff !important; /* Se vuelve celeste al pasar el mouse */
+    text-shadow: 0 0 10px rgba(0, 168, 255, 0.8); /* Brillo celeste de fondo */
+}
+
+.navbar-enginy .navbar-toggler {
+    background-color: #00a8ff; /* Botón de menú celeste en celulares */
+    border: none;
+    outline: none;
+}
+
+/* Estilos para el Carrusel y Botones Enginy */
+.text-enginy-accent {
+    color: #00a8ff !important;
+}
+
+.btn-enginy {
+    background-color: #00a8ff;
+    color: #ffffff !important;
+    border: 2px solid #00a8ff;
+    transition: all 0.3s ease;
+}
+
+.btn-enginy:hover {
+    background-color: transparent;
+    color: #00a8ff !important; /* Texto celeste al pasar el mouse */
+    border-color: #00a8ff;
+}
+
+/* Controles del carrusel (flechitas laterales) */
+.btn-enginy-control {
+    background-color: #0b3d91 !important; /* Azul oscuro */
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-enginy-control:hover {
+    background-color: #00a8ff !important; /* Se vuelve celeste al pasar el mouse */
+}
+
+/* El botón circular con el símbolo "+" */
+.btn-enginy-plus {
+    background-color: #00a8ff !important;
+    border-color: #00a8ff !important;
+    transition: all 0.3s ease;
+}
+
+.btn-enginy-plus:hover {
+    background-color: #0b3d91 !important; /* Se vuelve azul oscuro al pasar el mouse */
+    border-color: #0b3d91 !important;
+}
+
+/* Forzar que todas las fotos de la galería tengan el mismo tamaño */
+.gallery-item img {
+    height: 300px; 
+    object-fit: cover; 
+    object-position: center; 
+}
+
+/* Estilos para la sección Quiénes Somos */
+.quienes-somos-section {
+    padding: 100px 0;
+    background-color: #ffffff; /* Fondo blanco */
+}
+
+.quienes-somos-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px; /* Espacio entre logo y texto */
+}
+
+.quienes-somos-logo {
+    flex: 1; /* Ocupa la mitad del ancho */
+    text-align: left; /* Logo a la izquierda */
+}
+
+.quienes-somos-logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.quienes-somos-texto {
+    flex: 1; /* Ocupa la otra mitad del ancho */
+    padding: 20px;
+}
+
+.quienes-somos-texto h2 {
+    color: #0b3d91; /* Azul Enginy */
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.quienes-somos-texto p {
+    color: #555; /* Texto oscuro */
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Adaptación para dispositivos móviles */
+@media (max-width: 768px) {
+    .quienes-somos-content {
+        flex-direction: column; /* Apila logo y texto verticalmente */
+        text-align: center;
+    }
+    .quienes-somos-logo {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+}
+
+/* =========================================
+   Media Query para Tablets y Celulares 
+   (Pantallas menores a 768px)
+   ========================================= */
+@media (max-width: 768px) {
+    /* 1. Centrar todas las imágenes por defecto y hacerlas responsivas */
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* 2. Ajustar la sección "Quiénes Somos" para que quede en columna y centrada */
+    .quienes-somos-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .quienes-somos-logo {
+        margin-bottom: 20px; /* Separación entre el logo y el texto en celulares */
+    }
+
+    /* 3. Asegurar que los textos principales estén centrados en móviles */
+    .section-title, 
+    .quienes-somos-texto h2, 
+    .quienes-somos-texto p {
+        text-align: center !important;
+    }
+
+    /* 4. Ajustes para los botones en dispositivos móviles */
+    .btn-scroll {
+        display: block;
+        width: 100%; /* Botones ocupan todo el ancho en móviles para ser más fáciles de tocar */
+        margin: 10px auto;
+        text-align: center;
+    }
+}
