@@ -349,13 +349,13 @@
                             <div class="form-row">
                                 <div class="col-sm-6 control-group mb-3">
                                     <input type="text" class="form-control bg-white py-3 px-3" id="name" style="border: 1px solid #0b3d91;" 
-                                        placeholder="Nombre y Apellido" required="required"
+                                        placeholder="Nombre y Apellido" required="required" name="name"
                                         data-validation-required-message="Por favor ingresá tu nombre y apellido" />
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="col-sm-6 control-group mb-3">
                                     <input type="email" class="form-control bg-white py-3 px-3" id="email" style="border: 1px solid #0b3d91;"
-                                        placeholder="Email" required="required"
+                                        placeholder="Email" required="required" name="Email"
                                         data-validation-required-message="Por favor ingresá tu correo electrónico" />
                                     <p class="help-block text-danger"></p>
                                 </div>
@@ -363,23 +363,28 @@
                             
                             <div class="control-group mb-3">
                                 <input type="text" class="form-control bg-white py-3 px-3" id="subject" style="border: 1px solid #0b3d91;"
-                                    placeholder="Asunto" required="required"
+                                    placeholder="Asunto" required="required" name="asunto"
                                     data-validation-required-message="Por favor ingresá un asunto" />
                                 <p class="help-block text-danger"></p>
                             </div>
                             
                             <div class="control-group mb-4">
                                 <textarea class="form-control bg-white py-2 px-3" rows="4" id="message" style="border: 1px solid #0b3d91;"
-                                    placeholder="Mensaje" required="required"
+                                    placeholder="Mensaje" required="required" name="mensaje"
                                     data-validation-required-message="Por favor escribí tu mensaje acá"></textarea>
                                 <p class="help-block text-danger"></p>
                             </div>
                             
                             <div class="text-center">
-                                <button class="btn btn-enginy font-weight-bold py-2 px-4" type="submit" id="sendMessageButton">Enviar Mensaje</button>
+                               <input type="submit" id="button" value="Enviar Mensaje" class="btn btn-success" >
                             </div>
                             
                         </form>
+                        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+                        
+                        <script type="text/javascript">
+                            emailjs.init('Jkxi3AxcJU4RQ69_-')
+                        </script>
                     </div>
                 </div>
             </div>
@@ -504,10 +509,32 @@
         <script src="lib/isotope/isotope.pkgd.min.js"></script>
         <script src="lib/lightbox/js/lightbox.min.js"></script>
 
-        <script src="mail/jqBootstrapValidation.min.js"></script>
-        <script src="mail/contact.js"></script>
 
         <script src="js/main.js"></script>
+        <script>
+            const btn = document.getElementById('button');
+
+            document.getElementById('contactForm').addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                btn.value = 'enviando...';
+
+                const serviceID = 'default_service';
+                const templateID = 'template_k825eug';
+
+                emailjs.sendForm(serviceID, templateID, this).then(
+                    () => {
+                        btn.value = 'Enviar Mensaje';
+                        alert('Mensaje Enviado correctamente!');
+                    },
+                    (err) => {
+                        btn.value = 'Enviar Mensaje';
+                        alert(JSON.stringify(err));
+                    },
+                );
+            });
+
+        </script>
 </body>
 
 </html>
